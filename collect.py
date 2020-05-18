@@ -328,7 +328,7 @@ def collect(client, args):
                 else:
                     # If the episode did go well and we were recording, delete this episode
                     if not args.not_record:
-                        writer.delete_episode(args.data_path, str(episode_number-1).zfill(5))
+                        writer.delete_episode(args.data_path, str(episode_number).zfill(5))
 
                 episode_lateral_noise, episode_longitudinal_noise = check_episode_has_noise(
                     settings_module.lat_noise_percent,
